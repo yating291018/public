@@ -1,0 +1,39 @@
+<view class="currentweather">
+  <view class="w_header">
+    <view class="w_right">
+      <view class="degnumber">
+        {{low}}
+      </view>
+      <view>
+        {{weather.city}}
+        <view>
+          {{weather.data.forecast[0].type}} | 空气 {{weather.data.quality}}
+        </view>
+      </view>
+    </view>
+    <view class="w_bottom">
+      <view class="wb_item">
+        <view>{{weather.data.forecast[0].fx}}</view>
+        <view>{{weather.data.forecast[0].fl}}</view>
+      </view>
+      <view class="line"></view>
+      <view class="wb_item">
+        <view>相对湿度</view>
+        <view>{{weather.data.shidu}}</view>
+      </view>
+      <view class="line"></view>
+      <view class="wb_item">
+        <view>体感温度</view>
+        <view>{{weather.data.wendu}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="wlist">
+    <view class="wlist_item" wx:for="{{weather.data.forecast}}" wx:key="{{index}}">
+      <text>{{item.date}}</text>
+      <text>{{item.type}}|{{item.fx}}</text>
+      <text>{{item.low}}|{{item.high}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,45 @@
+.w_header {
+  position: relative;
+}
+.w_header {
+  height: 500rpx;
+  background-color: #77D6DE;
+  padding: 10rpx 20rpx;
+  color: #fff;
+}
+.w_right {
+  float: right;
+}
+.degnumber {
+  font-size: 60rpx;
+  padding-right: 20rpx;
+}
+.w_bottom {
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.wb_item {
+  width: 33%;
+  text-align: center;
+}
+.line {
+  height: 60rpx;
+  width: 1px;
+  background: #fff;
+}
+.wlist {
+  padding: 20rpx;
+}
+.wlist_item {
+  line-height: 80rpx;
+  color: #BCE7F8;
+  font-size: 26rpx;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #DDDDDD;
+}

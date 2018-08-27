@@ -1,0 +1,28 @@
+.map_container{ 
+  height: 800rpx;
+  width: 100%; 
+} 
+.map { 
+  height: 100%; 
+  width: 100%; 
+}
+.query {
+  padding: 20rpx;
+  height: 60rpx;
+  position: relative;
+}
+.icon {
+  position: absolute;
+  top: 53%;
+  left: 34%;
+  transform: translateY(-50%);
+}
+.query input {
+  height: 100%;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10rpx;
+}
+.place_info {
+  padding: 20rpx;
+}

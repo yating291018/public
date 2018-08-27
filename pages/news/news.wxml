@@ -1,0 +1,8 @@
+<view class="page-news">
+  <view class="news-item" wx:for="{{newdata}}" wx:key="{{index}}" data-articalurl="{{item.group_id}}" bindtap="enternewsdetail">
+    <view class="news-content">{{item.abstract}}</view>
+    <view class="news-image">
+      <image src="{{item.image_url || item.media_info.avatar_url}}"></image>
+    </view>
+  </view>
+</view>

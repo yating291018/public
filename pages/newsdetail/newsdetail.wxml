@@ -1,0 +1,11 @@
+<view class="page-detail">
+  <view class="title">
+    {{newsdetailData.title}}
+  </view>
+  <view class="comment">
+    <text>{{newsdetailData.source}}</text><text>{{newsdetailData.comment_count}}评论</text>
+  </view>
+  <view class="main">
+    {{newsdetailData.content}}
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="page-near">
+  <view class="query">
+    <icon type="search" size="12" class="icon"/>
+    <input placeholder='请搜索周边信息' bindconfirm="searchResult"></input>
+  </view>
+  <view class="map_container">
+    <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+  </view> 
+  <view class="place_info" wx:if="placeData">
+    <text>{{placeData.title}}</text> 
+    <text>{{placeData.address}}</text> 
+    <text>{{placeData.telephone}}</text> 
+  </view> 
+</view>

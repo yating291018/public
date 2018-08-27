@@ -1,0 +1,24 @@
+.page-news {
+  padding: 20rpx;
+}
+.news-item {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ccc;
+}
+.news-content {
+  width: 70%;
+  font-size: 30rpx;
+  height: 80rpx;
+  overflow: hidden;
+}
+.news-image {
+  width: 30%;
+  text-align: center;
+}
+.news-image image {
+  max-width: 200rpx;
+  height: 150rpx;
+  vertical-align: middle;
+}

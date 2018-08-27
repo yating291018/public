@@ -1,0 +1,21 @@
+<view class="page-more">
+  <view class="selectexpress">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{expressKeys}}">
+      <view class="picker">
+        选择快递类型：{{expressKeys[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="inputpostid">
+    <text>输入快递单号:</text> <input placeholder='请输入快递单号查询' bindconfirm="queryResult"></input>
+  </view>
+
+  <view class="queryResult">
+    <view class="title" wx:if="{{expressData.nu}}">你的快递单号：{{expressData.nu}}</view>
+    <view class="process-title" wx:if="{{expressData.data.length > 0}}">你的快递已到达：</view>
+    <view class="process" wx:for="{{expressData.data}}" wx:key="{{index}}"> <!--wx:for="{{expressData.data}}" wx:key="{{index}}"-->
+      <view>时间: {{item.time}}</view>
+      <view>内容: {{item.context}}</view>
+    </view>
+  </view>
+</view>

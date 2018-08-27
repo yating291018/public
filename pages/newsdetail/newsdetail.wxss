@@ -1,0 +1,17 @@
+.page-detail {
+  padding: 20rpx;
+}
+.title {
+  font-size: 40rpx;
+}
+.comment {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+.main {
+  font-size: 40rpx;
+  text-align: justify;
+  line-height: 30px;
+  word-break: break-word;
+}

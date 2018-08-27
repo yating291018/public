@@ -1,0 +1,15 @@
+<view class="page-movies">
+  <view class="moviecontainer" wx:for="{{movieList}}" wx:key="{{index}}">
+    <view class="movietitle" bindtap="getMoviesData" wx:if="{{moveData.subjects.length > 0}}">
+      <text>正在热映</text>
+      <text class="more">更多></text>
+    </view>
+    <scroll-view  scroll-x="true" class="scrollwrapper">
+      <view class="movieitem" wx:for="{{moveData.subjects}}" wx:key="{{index}}">
+        <image  src="{{item.images.small}}" mode="scaleToFill" lazy-load="true"></image>
+        <view>{{item.title}}</view>
+        <view>评分 {{item.rating.average}}</view>
+      </view>
+    </scroll-view>
+   </view>
+</view>

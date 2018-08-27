@@ -1,0 +1,58 @@
+<view class="home-page">
+   <view class="swiperContainer">
+    <swiper indicator-dots="{{indicatorDots}}" class="swiperwrapper"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="changeindexSelect">
+      <swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <image  src="{{item}}" class="slide-image" mode="scaleToFill"/>
+      </swiper-item>
+    </swiper>
+    <view class="indicatorContainer">
+      <view class="indicatorItem {{indexSelect === 0 ? 'indicatorItemSelect':''}}">1</view>
+      <view class="indicatorItem {{indexSelect === 1 ? 'indicatorItemSelect':''}}">2</view>
+      <view class="indicatorItem {{indexSelect === 2 ? 'indicatorItemSelect':''}}">3</view>
+    </view>
+   </view>
+
+   <view class="home-position">
+    <text class="currentposition">当前位置:</text> 
+    <view class="address">上海闵行</view>
+    <view class="positionicon" bindtap="enterPosition">
+      <icon type="download" size="14" color="#24519F"/>
+      <text>更改定位</text>
+    </view>
+   </view>
+
+   <view class="weather">
+    <view class="weatherContainer" bindtap="currentweather" wx:if="{{weatherdata}}">
+      <view class="weather-title">
+        {{weatherdata.city}}({{weatherdata.date}})
+      </view>
+      <view class="weadeg">{{low}} ~ {{high}}</view>
+      <view class="weatheritem">
+        <text>{{weatherdata.data.forecast[0].type}}</text>
+        <text>{{weatherdata.data.forecast[0].fx}}</text>
+        <text>{{weatherdata.data.forecast[0].fl}}</text>
+        <text>{{weatherdata.data.pm25}}</text>
+        <text>{{weatherdata.data.shidu}}</text>
+        <text>{{weatherdata.data.quality}}</text>
+      </view>
+      <view class="weather-jian">
+        {{weatherdata.data.forecast[0].notice}}
+      </view>
+    </view>
+   </view>
+
+   <view class="moviecontainer">
+    <view class="movietitle" bindtap="getMoviesData">
+      <text>正在热映</text>
+      <text class="more" bindtap="entermore">更多></text>
+    </view>
+    <scroll-view  scroll-x="true" class="scrollwrapper">
+      <view class="movieitem" wx:for="{{moveData.subjects}}" wx:key="{{index}}">
+        <image  src="{{item.images.small}}" mode="scaleToFill" lazy-load="true"></image>
+        <view>{{item.title}}</view>
+        <view>评分 {{item.rating.average}}</view>
+      </view>
+    </scroll-view>
+   </view>
+</view>

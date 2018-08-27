@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/more/more",
+    "pages/news/news",
+    "pages/newsdetail/newsdetail",
+    "pages/moves/moves",
+    "pages/near/near",
+    "pages/weather/weather",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#24519F",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "backgroundColor": "#24519F",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/near/near",
+        "text": "周边"
+      },
+      {
+        "pagePath": "pages/moves/moves",
+        "text": "电影"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多"
+      }
+    ]
+  }
+}
