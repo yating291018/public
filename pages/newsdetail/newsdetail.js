@@ -11,7 +11,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('options', options)
     this.getnewsDetailData(options.url)
   },
 
@@ -64,16 +63,6 @@ Page({
     
   },
   getnewsDetailData (groupid) {
-    let self = this
-    wx.request({
-      url: `https://m.toutiao.com/i${groupid}/info/?_signature=oRKX7hAQ-qALPddu6ifWnaESl.&i=${groupid}`,
-      success (res) {
-        console.log('res', res)
-        self.setData({
-          newsdetailData: res.data.data
-        })
-      }
-    })
   }
   
 })

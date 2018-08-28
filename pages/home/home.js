@@ -22,7 +22,8 @@ Page({
     weatherdata: {},
     low: '',
     high: '',
-    moveData: {}
+    moveData: {},
+    currentcity: ''
   },
 
   /**
@@ -114,6 +115,9 @@ Page({
           location: res.latitude + ',' + res.longitude,
           success(data) {
             var city = data.originalData.result.addressComponent.city
+            that.setData({
+              currentcity: city
+            })
             wx.request({
               url: app.globalData.weatherApi + '/open/api/weather/json.shtml?city=' + city,
               success(weather) {

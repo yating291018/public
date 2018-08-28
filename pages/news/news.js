@@ -20,7 +20,6 @@ Page({
     wx.request({
       url: app.globalData.toutiao + '/list/?tag=__all__&ac=wap&count=20&format=json_raw&as=A165CB1843FBC85&cp=5B83DB1C7855BE1&min_behot_time=0&_signature=Qgj-zAAAGYzoJ75MfcCOjEII.t&i=',
       success (res) {
-        console.log('res', res)
         self.setData({
           newdata: res.data.data
         })

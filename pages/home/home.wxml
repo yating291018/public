@@ -15,8 +15,8 @@
 
    <view class="home-position">
     <text class="currentposition">当前位置:</text> 
-    <view class="address">上海闵行</view>
-    <view class="positionicon" bindtap="enterPosition">
+    <view class="address">{{ currentcity }}</view>
+    <view class="positionicon">
       <icon type="download" size="14" color="#24519F"/>
       <text>更改定位</text>
     </view>
